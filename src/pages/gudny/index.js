@@ -128,6 +128,8 @@ export default function() {
             }} />
             <Slide9 nextSlide={() => {
             }} />
+            <Slide10 nextSlide={() => {
+            }} />
           </Slider>
         </div>
         </>
