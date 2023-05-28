@@ -17,11 +17,29 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.slick-slide {
+  position: absolute;
+}
+
+.slick-next {
+  position: absolute;
+  z-index: 999;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0;
+}
+.slick-next::after {
+  content: 'Ýta hér';
+  position: relative;
+  font-size: 15px;
+  color: #000;
+
+}
+
+.slick-prev {
+  display: none!important;
 }
