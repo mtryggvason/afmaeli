@@ -69,7 +69,7 @@ const Slide7 = ({nextSlide}) => {
 const Slide8 = ({nextSlide}) => {
   return (
   <div onClick={() => nextSlide()} className={Style.wrapper}>
-    <img alt="flottust" className={Style.image} src='/gudny/saman2.jpg' />
+    <img alt="flottust" className={Style.image} src='./gudny/saman2.jpg' />
     <p className={Style.h1}>Við hlökkum til í fleirri gæða stunda á hlaupum </p>
   </div>);
 };
@@ -77,14 +77,14 @@ const Slide8 = ({nextSlide}) => {
 
 const Slide9 = ({nextSlide}) => {
   return (<div className={Style.wrapper}>
-  <img alt="flottust" className={Style.image} src='/gudny/saman.jpg' />
+  <img alt="flottust" className={Style.image} src='./gudny/saman.jpg' />
     <p className={Style.h1}>eða á fjöllum!</p>
   </div>);
 };
 
 const Slide10 = ({nextSlide}) => {
   return (<div className={Style.wrapper}>
-  <img alt="flottust" className={Style.image} src='/gudny/gudny3.jpg' />
+  <img alt="flottust" className={Style.image} src='./gudny/gudny3.jpg' />
     <p className={Style.h1}>Kalli, Magnus og co!</p>
   </div>);
 };
