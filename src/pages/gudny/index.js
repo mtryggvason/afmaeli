@@ -19,7 +19,7 @@ const Slide1 = ({nextSlide}) => {
 
 const Slide2 = ({nextSlide}) => {
     return (<div className={Style.wrapper}>
-    <img alt="flottust" className={Style.image} src='/gudny/gudny2.jpg' />
+    <img alt="flottust" className={Style.image} src='./gudny/gudny2.jpg' />
       <p className={Style.h1}>Við erum fáranlega ánægðir með þig!</p>
     </div>);
 };
@@ -29,7 +29,7 @@ const Slide2 = ({nextSlide}) => {
 const Slide3 = ({nextSlide}) => {
     return (<div className={Style.wrapper}>
       <p className={Style.h1}>Til að fagna deginum þínum langar okkur að kaupa, handa þér....</p>
-        <img  className={Style.gift} src="/gudny/gift_closed.png"></img>
+        <img  className={Style.gift} src="./gudny/gift_closed.png"></img>
     </div>);
 };
 
@@ -37,15 +37,15 @@ const Slide3 = ({nextSlide}) => {
 const Slide4 = ({nextSlide}) => {
   return (<div className={Style.wrapper}>
     <p className={Style.h1}>Garn! </p>
-    <img className={Style.yarn} src="/gudny/yarn.png"></img>
-    <img className={`${Style.gift_open}`} src="/gudny/gift_open.png"></img>
+    <img className={Style.yarn} src="./gudny/yarn.png"></img>
+    <img className={`${Style.gift_open}`} src="./gudny/gift_open.png"></img>
   </div>);
 };
 
 const Slide5 = ({nextSlide}) => {
   return (<div className={Style.wrapper}>
     <p className={Style.h1}>og.... </p>
-    <img className={Style.gift} src="/gudny/gift_closed.png"></img>
+    <img className={Style.gift} src="./gudny/gift_closed.png"></img>
   </div>);
 };
 
@@ -53,16 +53,16 @@ const Slide5 = ({nextSlide}) => {
 const Slide6 = ({nextSlide}) => {
   return (<div className={Style.wrapper}>
     <p className={Style.h1}>Miriam</p>
-    <img className={Style.miriam} src="/gudny/madMiri.png"></img>
-    <img className={`${Style.gift_open}`} src="/gudny/gift_open.png"></img>
+    <img className={Style.miriam} src="./gudny/madMiri.png"></img>
+    <img className={`${Style.gift_open}`} src="./gudny/gift_open.png"></img>
   </div>);
 };
 
 const Slide7 = ({nextSlide}) => {
   return (<div className={Style.wrapper}>
     <p className={Style.h1}>Sem vonandi verður að peysu í haust!</p>
-    <img className={Style.miriam} src="/gudny/sweater.png"></img>
-    <img className={`${Style.gift_open}`} src="/gudny/gift_open.png"></img>
+    <img className={Style.miriam} src="./gudny/sweater.png"></img>
+    <img className={`${Style.gift_open}`} src="./gudny/gift_open.png"></img>
   </div>);
 };
 
