@@ -11,7 +11,7 @@ import { useWindowSize } from "@react-hook/window-size";
 const Slide1 = ({nextSlide}) => {
     return (
     <div onClick={() => nextSlide()} className={Style.wrapper}>
-      <img alt="flottust" className={Style.image} src='/gudny/gudny1.jpg' />
+      <img alt="flottust" className={Style.image} src='./gudny/gudny1.jpg' />
       <p className={Style.h1}>Til hamingju með afmælið Guðny</p>
     </div>);
 };
