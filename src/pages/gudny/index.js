@@ -7,6 +7,7 @@ import { useRef } from "react";
 import { useState } from "react";
 import Confetti from 'react-confetti'
 import { useWindowSize } from "@react-hook/window-size";
+import { useEffect } from "react";
 
 const Slide1 = ({nextSlide}) => {
     return (
@@ -92,6 +93,10 @@ const Slide10 = ({nextSlide}) => {
 
 // eslint-disable-next-line import/no-anonymous-default-export, react/display-name
 export default function() {
+  useEffect(() => {
+    window.dispatchEvent(new Event('resize'));
+
+  }, []);
   const slider = useRef(null)
   const [ width, height ] = useWindowSize();
     const settings = {

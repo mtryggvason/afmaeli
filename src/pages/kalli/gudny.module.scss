@@ -1,0 +1,95 @@
+.h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+    color: #F266AB;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    pointer-events: none;
+    z-index: -1;
+    height: 80vh;
+
+}
+
+.image {
+    width: 300px;
+}
+
+.gift {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    animation: tilt-shaking .5s infinite;
+}
+
+.gift_open {
+    position: absolute;
+    bottom: 0;
+    width: 200px; 
+}
+
+
+.yarn {
+    position: absolute;
+    bottom: 50px;
+    width: 180px;
+
+    opacity: 0;
+}
+
+.miriam {
+    position: absolute;
+    bottom: 50px;
+    width: 130px;
+
+    opacity: 0;
+}
+
+
+.slider_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+    background-color: #FFB84C;
+    :global .slick-active {
+        :local .yarn {
+            animation: slidein .8s ease ;
+            animation-delay: .5s;
+            animation-fill-mode: forwards;
+        }
+        :local .miriam {
+            animation: slidein .8s ease ;
+            animation-delay: .5s;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+@keyframes slidein {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateY(-80%);
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
