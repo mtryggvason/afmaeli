@@ -57,7 +57,7 @@ const Slide6 = ({nextSlide}) => {
 
 const Slide7 = ({nextSlide}) => {
   return (<div className={Style.wrapper}>
-  <img alt="flottust" className={Style.image} src='./gudny/gudny3.jpg' />
+  <img alt="flottust" className={Style.image} src='./gudny/saman.png' />
     <p className={Style.h1}>Hlökkum til að hitta þig á Ísland</p>
     <p> Magnus og co!</p>
   </div>);
