@@ -9,7 +9,7 @@ const Slide1 = ({ nextSlide }) => {
   return (
     <div onClick={() => nextSlide()} className={Style.wrapper}>
       <img alt="flottust" className={Style.image} src="./mamma/epik.png" />
-      <p className={Style.h1}>Til hamingju með afmælið elsku Mamma</p>
+      <p className={Style.h1}>Til hamingju með afmælið elsku Mamma!</p>
     </div>
   );
 };
@@ -84,7 +84,7 @@ const Slide9 = ({ nextSlide }) => {
     <div className={Style.wrapper}>
       <img alt="flottust" className={Style.image} src="./mamma/tonleikar.png" />
       <p className={Style.h1}>
-        Okkur langar til að bjóða þér og á nýarstónleika í Köben
+        Okkur langar til að bjóða þér og pabba á nýarstónleika í Köben
       </p>
     </div>
   );
