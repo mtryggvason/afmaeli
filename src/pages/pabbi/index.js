@@ -8,52 +8,46 @@ import { useEffect } from "react";
 const Slide1 = ({ nextSlide }) => {
   return (
     <div onClick={() => nextSlide()} className={Style.wrapper}>
-      <img alt="flottust" className={Style.image} src="./pabbi/opna.jpg" />
-      <p className={Style.h1}>Til hamingju með afmælið elsku Pabbi</p>
+      <img alt="flottust" className={Style.image} src="./mamma/epik.png" />
+      <p className={Style.h1}>Til hamingju með afmælið elsku Mamma</p>
     </div>
   );
 };
 
 const Slide2 = ({ nextSlide }) => {
   return (
-    <div className={Style.wrapper}>
-      <img alt="flottust" className={Style.image} src="./pabbi/number2.jpeg" />
-      <p className={Style.h1}>Þú ert ýmislegt</p>
+    <div onClick={() => nextSlide()} className={Style.wrapper}>
+      <img alt="flottust" className={Style.image} src="./mamma/saman.png" />
+      <p className={Style.h1}>
+        Þú ert líklega það besta sem hefur komið fyrir okkur
+      </p>
     </div>
   );
 };
 
 const Slide3 = ({ nextSlide }) => {
   return (
-    <div className={Style.wrapper}>
-      <img
-        alt="flottust"
-        className={Style.image}
-        src="./pabbi/leidsogumadur.jpg"
-      />
-      <p className={Style.h1}>Leiðsögumaður</p>
+    <div onClick={() => nextSlide()} className={Style.wrapper}>
+      <img alt="flottust" className={Style.image} src="./mamma/stelpur.png" />
+      <p className={Style.h1}>líka fyrir þessar</p>
     </div>
   );
 };
 
 const Slide4 = ({ nextSlide }) => {
   return (
-    <div className={Style.wrapper}>
-      <img
-        alt="flottust"
-        className={Style.image}
-        src="./pabbi/tonlistarmadur.jpg"
-      />
-      <p className={Style.h1}>Tónlistarmaður</p>
+    <div onClick={() => nextSlide()} className={Style.wrapper}>
+      <img alt="flottust" className={Style.image} src="./mamma/baldur.png" />
+      <p className={Style.h1}>og þessi</p>
     </div>
   );
 };
 
 const Slide5 = ({ nextSlide }) => {
   return (
-    <div className={Style.wrapper}>
-      <img className={Style.image} src="./pabbi/herramadur.png"></img>
-      <p className={Style.h1}>Herramaður</p>
+    <div onClick={() => nextSlide()} className={Style.wrapper}>
+      <img alt="flottust" className={Style.image} src="./mamma/salka.png" />
+      <p className={Style.h1}>og þessa</p>
     </div>
   );
 };
@@ -61,9 +55,8 @@ const Slide5 = ({ nextSlide }) => {
 const Slide6 = ({ nextSlide }) => {
   return (
     <div className={Style.wrapper}>
-      <img className={Style.image} src="./pabbi/formadur.jpg"></img>
-
-      <p className={Style.h1}>Formaður</p>
+      <img alt="flottust" className={Style.image} src="./mamma/fyrirmynd.png" />
+      <p className={Style.h1}>Þú ert fyrirmyndin okkar</p>
     </div>
   );
 };
@@ -71,12 +64,8 @@ const Slide6 = ({ nextSlide }) => {
 const Slide7 = ({ nextSlide }) => {
   return (
     <div className={Style.wrapper}>
-      <img
-        alt="flottust"
-        className={Style.image}
-        src="./pabbi/gardyrkjumadur.jpg"
-      />
-      <p className={Style.h1}>Garðyrkjumaður</p>
+      <img alt="flottust" className={Style.image} src="./mamma/askorun.png" />
+      <p className={Style.h1}>Óhrædd við áskoranir...</p>
     </div>
   );
 };
@@ -84,12 +73,8 @@ const Slide7 = ({ nextSlide }) => {
 const Slide8 = ({ nextSlide }) => {
   return (
     <div className={Style.wrapper}>
-      <img
-        alt="flottust"
-        className={Style.image}
-        src="./pabbi/fyrirsaetumadur.jpg"
-      />
-      <p className={Style.h1}>Fyrirsátumaður!</p>
+      <img alt="flottust" className={Style.image} src="./mamma/hnefi.png" />
+      <p className={Style.h1}>...sama hversu vitlausar þær eru!</p>
     </div>
   );
 };
@@ -97,9 +82,9 @@ const Slide8 = ({ nextSlide }) => {
 const Slide9 = ({ nextSlide }) => {
   return (
     <div className={Style.wrapper}>
-      <img alt="flottust" className={Style.image} src="./pabbi/pabbi.jpg" />
+      <img alt="flottust" className={Style.image} src="./pabbi/hlaup.png" />
       <p className={Style.h1}>
-        En fyrir okkur ertu fyrst og fremst heimsins besti pabbi...
+        Okkur langar til að bjóða þér og á nýarstónleika í Köben
       </p>
     </div>
   );
@@ -108,31 +93,8 @@ const Slide9 = ({ nextSlide }) => {
 const Slide10 = ({ nextSlide }) => {
   return (
     <div className={Style.wrapper}>
-      <img alt="flottust" className={Style.image} src="./pabbi/saman.jpg" />
-      <p className={Style.h1}>... og afi!</p>
-    </div>
-  );
-};
-
-const Slide11 = ({ nextSlide }) => {
-  return (
-    <div className={Style.wrapper}>
-      <img alt="flottust" className={Style.image} src="./pabbi/hlaup.png" />
-      <p className={Style.h1}>
-        Okkur langar til að bjóða þér með okkur í 2(eða þriggja ef þú ert í
-        formi) landa hlaup í Október.
-      </p>
-    </div>
-  );
-};
-
-const Slide12 = ({ nextSlide }) => {
-  return (
-    <div className={Style.wrapper}>
-      <img alt="flottust" className={Style.image} src="./pabbi/gamall.jpeg" />
-      <p className={Style.h1}>
-        Við elskum þig og hlökkum til næstu 70 ára! Mynd frá Prag 2095
-      </p>
+      <img alt="flottust" className={Style.image} src="./mamma/skal.png" />
+      <p className={Style.h1}>Skál fyrir þér!</p>
     </div>
   );
 };
@@ -174,8 +136,6 @@ export default function () {
           <Slide8 nextSlide={() => {}} />
           <Slide9 nextSlide={() => {}} />
           <Slide10 nextSlide={() => {}} />
-          <Slide11 nextSlide={() => {}} />
-          <Slide12 nextSlide={() => {}} />
         </Slider>
       </div>
     </>
