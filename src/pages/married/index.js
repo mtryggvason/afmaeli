@@ -3,33 +3,36 @@ import Style from "./married.module.scss";
 import { useEffect, useRef, useState } from "react";
 import Confetti from "react-confetti";
 import { useWindowSize } from "@react-hook/window-size";
+import { Great_Vibes } from "next/font/google";
+
+const signatureFont = Great_Vibes({ weight: "400", subsets: ["latin"] });
 
 // `ratio` is the shown width / height. Slides 1 and 2 are slightly shorter than
 // their files, which trims the "PORTRAIT" screenshot badge off the top. The
 // sun_face slide is slightly narrower, which trims a white strip off the right.
 const SLIDES = [
   {
-    src: "./marriage/slide_1.png",
+    src: "./marriage/slide_1.jpg",
     ratio: 1138 / 1320,
     text: "Dear Thomas and Guðný, congratulations on your big day",
   },
   {
-    src: "./marriage/slide_2.png",
+    src: "./marriage/slide_2.jpg",
     ratio: 1150 / 1100,
     text: "May the wind always be at your back (unlike in this picture)",
   },
   {
-    src: "./marriage/sun_face.png",
+    src: "./marriage/sun_face.jpg",
     ratio: 996 / 1150,
     text: "May the sun shine warm upon your face",
   },
   {
-    src: "./marriage/slide_3.png",
+    src: "./marriage/slide_3.jpg",
     ratio: 978 / 1010,
     text: "We are so happy for you",
   },
   {
-    src: "./marriage/family.png",
+    src: "./marriage/family.jpg",
     ratio: 980 / 790,
     text: "and your beautiful family!",
   },
@@ -39,7 +42,7 @@ const SLIDES = [
   },
 ];
 
-const MUSIC_FADE_IN_SECONDS = 3;
+const MUSIC_FADE_IN_SECONDS = 6;
 
 const Video = ({ src, active, style }) => {
   const video = useRef(null);
@@ -143,10 +146,16 @@ export default function Married() {
       .createMediaElementSource(music.current)
       .connect(gain)
       .connect(context.destination);
-    gain.gain.setValueAtTime(0, context.currentTime);
-    gain.gain.linearRampToValueAtTime(
-      1,
-      context.currentTime + MUSIC_FADE_IN_SECONDS
+    gain.gain.value = 0;
+    // Wait for "playing" so a slow download can't use up the fade in silence.
+    music.current.addEventListener(
+      "playing",
+      () => {
+        const now = context.currentTime;
+        gain.gain.setValueAtTime(0, now);
+        gain.gain.linearRampToValueAtTime(1, now + MUSIC_FADE_IN_SECONDS);
+      },
+      { once: true }
     );
     music.current.play().catch(() => {});
   };
@@ -164,7 +173,9 @@ export default function Married() {
       {startConfetti && <Confetti width={width} height={height} />}
       <audio ref={music} src="./marriage/song.mp3" loop preload="auto" />
       <div className={`${Style.intro} ${started ? Style.intro_done : ""}`}>
-        <p className={Style.message_text}>For Thomas and Guðný</p>
+        <p className={`${Style.intro_title} ${signatureFont.className}`}>
+          For Thomas and Guðný
+        </p>
         <div>
           <button
             type="button"
@@ -202,7 +213,7 @@ export default function Married() {
         >
           <img
             className={Style.card_image}
-            src="./marriage/card.png"
+            src="./marriage/card.jpg"
             alt="Wedding Pizza Card: a voucher for a pizza oven from Karl and Magnus"
           />
         </a>

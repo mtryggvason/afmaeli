@@ -84,6 +84,11 @@ $ink: #8f3f26;
   transition: opacity 0.7s ease, visibility 0s;
 }
 
+.intro_title {
+  font-size: clamp(44px, 12vw, 72px);
+  line-height: 1.2;
+}
+
 .sound_note {
   font-size: 14px;
 }
