@@ -174,7 +174,7 @@ export default function Married() {
       <audio ref={music} src="./marriage/song.mp3" loop preload="auto" />
       <div className={`${Style.intro} ${started ? Style.intro_done : ""}`}>
         <p className={`${Style.intro_title} ${signatureFont.className}`}>
-          Thomas and Guðný
+          Thomas & Guðný
         </p>
         <div>
           <button
