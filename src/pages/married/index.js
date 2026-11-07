@@ -29,7 +29,7 @@ const SLIDES = [
   {
     src: "./marriage/slide_3.jpg",
     ratio: 978 / 1010,
-    text: "We are so happy for you",
+    text: "We are so happy for you....",
   },
   {
     src: "./marriage/family.jpg",
@@ -183,9 +183,9 @@ export default function Married() {
             onClick={start}
             disabled={started}
           >
-            Start Here
+            Byrja hér
           </button>
-          <p className={Style.sound_note}>🔊 Sound on</p>
+          <p className={Style.sound_note}>🔊 Kveiktu á hljóðinu</p>
         </div>
       </div>
       <div onClick={handleTap} className={Style.slider_wrapper}>
